@@ -101,7 +101,7 @@ class AppLivewire extends Component
     {
         $validatedData = $this->validate();
 
-        // If Book exist
+        // If app exist
         if ($this->app) {
             $this->app->title = $validatedData['title'];
             $this->app->url = $validatedData['url'];
