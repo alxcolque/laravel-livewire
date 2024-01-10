@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\AppLivewire;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('apps', [AppLivewire::class, 'index'])->name('apps');
 
 Auth::routes();
 Route::get('/posts', [App\Livewire\Post::class, 'indexMethod']);
